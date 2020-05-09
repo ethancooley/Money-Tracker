@@ -1,11 +1,13 @@
-import sys
 from function import process_file
+
+sampleRegularTransactions = 'Sample_Regular_Transactions.txt'
+noRegularTransactions = 'No_Regular_Transactions.txt'
 
 weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
 # Imports command line arguments and tests function for exceptions
 try:
-    major_list = process_file(sys.argv[1])
+    major_list = process_file(file)
 except ValueError:
     print('Error: File not found!')
     exit()
